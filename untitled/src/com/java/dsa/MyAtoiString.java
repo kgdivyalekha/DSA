@@ -18,7 +18,6 @@ public class MyAtoiString {
             i++;
         }
         else if(s.charAt(0)=='+') {
-            sign=1;
             i++;
         }
         while(i<s.length()) {
