@@ -3,10 +3,9 @@ package com.java.dsa.basics;
 /*
 * Valid Operations:
 * Insert-done
-* Delete
+* Delete -done
 * Display-done
-* Find Length
-*
+* Has Cycle
 * */
 public class CircularLinkedList {
     private class Node{
@@ -15,11 +14,6 @@ public class CircularLinkedList {
 
         public Node(int data) {
             this.data = data;
-        }
-
-        public Node(int data, Node next) {
-            this.data = data;
-            this.next = next;
         }
     }
     private Node head;
@@ -50,6 +44,7 @@ public class CircularLinkedList {
         cll.delete(60);
         System.out.println("\n\nAfter deletion");
         cll.display();
+        System.out.println("\n\nHas Cycle?: " + cll.hasCycle());
     }
     public void insert(int val)
     {
@@ -65,6 +60,19 @@ public class CircularLinkedList {
             node.next=head;
             tail=node;
         }
+    }
+    public boolean hasCycle()
+    {
+        Node slow=head;
+        Node fast=head;
+        while(fast!=null && fast.next!=null)
+        {
+            slow=slow.next;
+            fast=fast.next.next;
+            if(slow==fast)
+                return true;
+        }
+        return false;
     }
     public void display()
     {
