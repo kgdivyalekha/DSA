@@ -10,7 +10,7 @@ public class DoublyLinkedList
     Delete Last -done
     Delete First -done
     Delete At - done
-    Find Index of
+    Find Index of-done
     Display-done
     */
 {
