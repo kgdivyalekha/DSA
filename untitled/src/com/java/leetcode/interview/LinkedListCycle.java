@@ -22,6 +22,7 @@ public class LinkedListCycle {
         node3.next=node1;
 
         System.out.println(hasCycle(head));
+        System.out.println(lengthOfCycle(head));
     }
         public static boolean hasCycle(ListNode head) {
             ListNode fast=head;
@@ -38,7 +39,31 @@ public class LinkedListCycle {
             }
             return false;
         }
+        public static int lengthOfCycle(ListNode head)
+        {
+            int length=0;
+            ListNode fast=head;
+            ListNode slow=head;
+            if(head==null||head.next==null)
+                return -1;
+            while(fast!=null && fast.next!=null )
+            {
+                slow=slow.next;
+                fast=fast.next.next;
+                if(fast==slow)
+                {
+                    ListNode temp=slow;
+                    do {
+                        temp=temp.next;
+                        length++;
 
+                    } while(temp!=slow);
+                    return length;
+                }
+
+            }
+            return -1;
+        }
 
 
 }
