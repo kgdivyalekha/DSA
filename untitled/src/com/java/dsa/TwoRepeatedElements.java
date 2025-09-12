@@ -10,7 +10,7 @@ public class TwoRepeatedElements {
         System.out.println(Arrays.toString(res));
     }
 
-   /* private static int[] twoRepeatedElements(int[] arr) {
+   /* private static int[] twoRepeatedElementsAnyOrder(int[] arr) {
         Map<Integer,Integer> map=new HashMap<>();
         for(int i=0;i<arr.length;i++) {
             if (map.containsKey(arr[i]))
