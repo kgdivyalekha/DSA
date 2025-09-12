@@ -7,7 +7,7 @@ public class MajorityElement {
         int[] arr={5,6, 5, 6, 5, 6, 5, 6, 5, 5, 5,5,5};
         System.out.println(majorityElement(arr));
     }
-    public static int majorityElement(int arr[]) {
+    public static int majorityElement(int[] arr) {
         // code here
         if(arr.length==1)
             return arr[0];
