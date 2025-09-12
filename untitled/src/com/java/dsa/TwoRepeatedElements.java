@@ -1,7 +1,6 @@
 package com.java.dsa;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class TwoRepeatedElements {
     public static void main(String[] args) {
