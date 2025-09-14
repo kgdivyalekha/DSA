@@ -20,24 +20,24 @@ public class MajorityElement {
         {
             if(left<right && arr[left]==arr[right])
             {
-                prev=count;
+                prev=count;//to track previous highest frequency
                 //ans=arr[left];
-                count=Math.max(count,right-left+1);
+                count=Math.max(count,right-left+1);//find the greatest frequency
                 if(count>prev)
                 {
                     ans=arr[left];
                     freq=count;
-                    if(freq>arr.length/2)
+                    if(freq>arr.length/2)//arr length/2 is done to check if the freq exceeds atleast half
                         return ans;
                 }
             }
             else
             {
-                left=right;
-                count=0;
+                left=right;//if not move the window to right
+                count=0;//reset counter for next value
             }
-            right++;
+            right++;//increment right pointer anyways
         }
-        return -1;
+        return -1;//if not majority element found, return -1 as default value.
     }
 }
