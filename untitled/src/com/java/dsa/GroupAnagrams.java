@@ -21,7 +21,7 @@ public class GroupAnagrams {
                 //if the key is to be added new, add a new entry with empty list
                 if(!map.containsKey(key))
                     map.put(key,new ArrayList<>());
-                //add the key with it's original string as value
+                //add the key with its original string as value
                 map.get(key).add(str);
             }
             //return the values of the map
