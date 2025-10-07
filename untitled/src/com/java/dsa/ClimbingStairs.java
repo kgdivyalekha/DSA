@@ -6,6 +6,8 @@ public class ClimbingStairs {
     }
 
     private static int climbingStairs(int stairs) {
+        if(stairs==0||stairs==1)
+            return stairs;
         int[] dp=new int[stairs+1];
         dp[0]=0;
         dp[1]=1;
